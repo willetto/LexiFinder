@@ -1,0 +1,132 @@
+/* @import "https://unpkg.com/open-props/normalize.min.css"; */
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Lilita+One&family=Montserrat&display=swap");
+/* font-family: 'Inconsolata', monospace;
+font-family: 'Lilita One', cursive;
+font-family: 'Montserrat', sans-serif; */
+:root {
+  --red: hsl(346, 84%, 61%);
+  --yellow: hsl(42, 100%, 70%);
+  --green: hsl(164, 95%, 43%);
+  --blue-200: hsl(195, 40%, 92%);
+  --blue-500: hsl(195, 83%, 38%);
+  --blue-800: hsl(195, 83%, 16%);
+  --grey: hsl(0, 0%, 80%);
+  --r: 0.6rem;
+}
+
+body {
+  background-color: var(--blue-200);
+  display: grid;
+  place-content: center;
+  margin-top: 5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  color: var(--blue-800);
+  display: grid;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.title {
+  font-family: "Lilita One", sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+  color: var(--blue-800);
+  line-height: 0%;
+}
+.header-icons {
+  margin-inline: auto;
+}
+img {
+  height: 1.55rem;
+  margin: 5px;
+}
+
+main {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1rem;
+}
+.input-frame {
+  display: grid;
+  justify-content: center;
+}
+.possible-letters,
+.placed-input {
+  border-radius: var(--r);
+  overflow: hidden;
+  background-color: var(--grey);
+  border: var(--grey) 2px solid;
+}
+.placed-para {
+  margin-block: 0.2rem;
+  text-align: center;
+}
+textarea {
+  border: none;
+  /* border-color: var(--grey); */
+  resize: none;
+  height: min-content;
+  overflow: hidden;
+  margin-inline: -1px;
+  margin-bottom: -4px;
+  /* padding: 0; */
+  outline: var(--blue-800);
+  writing-mode: vertical-rl;
+  text-align: center;
+  font-size: 2.2rem;
+  width: 2.5rem;
+}
+.placed-letters {
+  margin-top: 1rem;
+  position: relative;
+}
+.add-remove-btns {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: -1rem;
+}
+.btns-left {
+  left: -2.5rem;
+}
+.btns-right {
+  right: -2.5rem;
+}
+.search-btn {
+  border: none;
+  color: var(--blue-800);
+  background-color: var(--yellow);
+  font-family: "Lilita One", sans-serif;
+  font-size: 2rem;
+  padding-block: 0.5rem;
+  margin-top: 1rem;
+  letter-spacing: 0.05rem;
+  border-radius: var(--r);
+  transition: color 200ms;
+}
+.search-btn:hover {
+  color: var(--blue-500);
+  cursor: pointer;
+}
+.results-frame {
+  background-color: white;
+  border-radius: var(--r);
+  position: relative;
+}
+.results-header {
+  position: absolute;
+  background-color: var(--yellow);
+  text-align: center;
+  border-radius: var(--r) var(--r) 0 0;
+  height: 20%;
+  width: 100%;
+}
+.results-header h2 {
+  margin-bottom: 0.25rem;
+}
+.results-header p {
+  margin: 0;
+}
